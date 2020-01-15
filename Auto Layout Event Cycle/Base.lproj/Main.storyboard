@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,56 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Auto_Layout_Event_Cycle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Luw-at-id5">
+                                <rect key="frame" x="103.5" y="344.5" width="207" height="207"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Luw-at-id5" secondAttribute="height" multiplier="1:1" id="sFc-la-5w1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjH-qn-gKa">
+                                <rect key="frame" x="103.5" y="396.5" width="103.5" height="103.5"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bjH-qn-gKa" secondAttribute="height" multiplier="1:1" id="dKw-bV-u8z"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AvI-xO-VaO">
+                                <rect key="frame" x="207" y="396.5" width="103.5" height="103.5"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AvI-xO-VaO" secondAttribute="height" multiplier="1:1" id="beX-Ea-jKd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bjH-qn-gKa" firstAttribute="width" secondItem="Luw-at-id5" secondAttribute="width" multiplier="0.5" id="OWb-g9-4nk"/>
+                            <constraint firstItem="bjH-qn-gKa" firstAttribute="leading" secondItem="Luw-at-id5" secondAttribute="leading" id="Piw-Kl-Tgo"/>
+                            <constraint firstItem="Luw-at-id5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WSL-LY-zNj"/>
+                            <constraint firstItem="Luw-at-id5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="jfU-xb-0Pd"/>
+                            <constraint firstItem="AvI-xO-VaO" firstAttribute="width" secondItem="Luw-at-id5" secondAttribute="width" multiplier="0.5" id="pbe-aH-bfy"/>
+                            <constraint firstItem="AvI-xO-VaO" firstAttribute="centerY" secondItem="Luw-at-id5" secondAttribute="centerY" id="qA4-gi-ZDE"/>
+                            <constraint firstItem="Luw-at-id5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vmR-1n-xdk"/>
+                            <constraint firstItem="AvI-xO-VaO" firstAttribute="trailing" secondItem="Luw-at-id5" secondAttribute="trailing" id="xe1-3D-UZW"/>
+                            <constraint firstItem="bjH-qn-gKa" firstAttribute="centerY" secondItem="Luw-at-id5" secondAttribute="centerY" id="yHX-bR-zuf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="purpleView" destination="bjH-qn-gKa" id="9VI-7l-maf"/>
+                        <outlet property="redView" destination="AvI-xO-VaO" id="1xO-rK-8dV"/>
+                        <outlet property="yellowView" destination="Luw-at-id5" id="gwS-JG-J3b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="139"/>
         </scene>
     </scenes>
 </document>

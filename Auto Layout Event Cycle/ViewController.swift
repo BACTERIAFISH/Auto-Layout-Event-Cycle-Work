@@ -9,10 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var yellowView: UIView!
+    
+    @IBOutlet weak var purpleView: UIView!
+    
+    @IBOutlet weak var redView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
+        yellowView.layer.cornerRadius = yellowView.bounds.width / 2
+        purpleView.layer.cornerRadius = purpleView.bounds.width / 2
+        redView.layer.cornerRadius = redView.bounds.width / 2
+        
     }
 
 
